@@ -234,8 +234,8 @@ export const mapError = (error, pointers) => {
     keyError = true
   }
   // currently only used by actions
-  if (/is not exactly one from/.test(error.message)) {
-    message = `"${error.property}" is not a valid action`
+  if (error.name === 'oneOf') {
+    message = `${error.property} is not a valid action`
   }
 
   const pointer = pointers[`/${pointerList.join('/')}`]
