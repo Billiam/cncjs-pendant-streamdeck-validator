@@ -2,6 +2,9 @@
   "name": "cncjs-pendant-streamdeck-validator",
   "version": "1.0.0",
   "description": "Validation utilities for cncjs-pendant-streamdeck configuration",
+  "author": "Billiam",
+  "license": "MIT",
+  "repository": "github:billiam/cncjs-pendant-streamdeck-validator",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "bin": {
@@ -14,8 +17,6 @@
     "build-mjs": "npm run build-base -- --out-extension:.js=.mjs --format=esm src/index.js",
     "build": "rimraf dist && npm run build-cjs && npm run build-mjs && npm run build-cli && chmod u+x dist/cli.js && cp ./src/lib/config.schema.json ./dist"
   },
-  "author": "Billiam",
-  "license": "MIT",
   "dependencies": {
     "chalk": "^4.0.0",
     "commander": "^9.4.0",

@@ -379,6 +379,7 @@
       "additionalProperties": false,
       "description": "CNCJS connection and port information",
       "properties": {
+        "accessTokenExpiration": { "type": "string" },
         "baudRate": { "type": "integer" },
         "controllerType": { "enum": ["Grbl"], "type": "string" },
         "port": { "description": "Machine connection port", "type": "string" },
@@ -464,6 +465,11 @@
           "type": "number",
           "default": 16
         },
+        "gcodeLimit": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0
+        },
         "lineHeight": {
           "type": "number"
         },
@@ -477,6 +483,10 @@
         "rows": { "type": "integer", "default": 3 },
         "textColor": { "$ref": "#/definitions/color" },
         "textShadow": { "type": "boolean" },
+        "throttle": {
+          "type": "integer",
+          "minimum": 0
+        },
         "timeout": {
           "type": "number",
           "default": 0,
