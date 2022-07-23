@@ -1,0 +1,29 @@
+{
+  "name": "cncjs-pendant-streamdeck-validator",
+  "version": "1.0.0",
+  "description": "Validation utilities for cncjs-pendant-streamdeck configuration",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "bin": {
+    "cncjs-pendant-streamdeck-validator": "dist/cli.js"
+  },
+  "scripts": {
+    "build-base": "esbuild --bundle --outdir=dist --external:./src/lib/config.schema.json --external:jsonschema --external:json-source-map --external:commander --external:chalk --platform=node",
+    "build-cli": "npm run build-base -- --format=cjs src/cli.js",
+    "build-cjs": "npm run build-base -- --format=cjs src/index.js",
+    "build-mjs": "npm run build-base -- --out-extension:.js=.mjs --format=esm src/index.js",
+    "build": "rimraf dist && npm run build-cjs && npm run build-mjs && npm run build-cli && chmod u+x dist/cli.js && cp ./src/lib/config.schema.json ./dist"
+  },
+  "author": "Billiam",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^9.4.0",
+    "json-source-map": "^0.6.1",
+    "jsonschema": "^1.4.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.49",
+    "rimraf": "^3.0.2"
+  }
+}
