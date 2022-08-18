@@ -10,9 +10,9 @@
           "maxItems": 1,
           "minItems": 0,
           "type": "array"
-        },
-        "required": ["action"]
-      }
+        }
+      },
+      "required": ["action"]
     },
     "brightness": {
       "properties": {
@@ -446,9 +446,12 @@
       },
       "type": "object"
     },
+    "streamdeckUi": {
+      "$ref": "#/properties/ui"
+    },
     "ui": {
       "additionalProperties": false,
-      "description": "Grid dimension configuration",
+      "description": "Grid display configuration",
       "properties": {
         "brightness": {
           "type": "integer",
