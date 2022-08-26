@@ -25,6 +25,17 @@
       },
       "required": ["action", "arguments"]
     },
+    "command": {
+      "properties": {
+        "action": { "const": "command" },
+        "arguments": {
+          "items": [{ "type": ["string", "null"] }],
+          "maxItems": 2,
+          "minItems": 1
+        }
+      },
+      "required": ["action", "arguments"]
+    },
     "enterPosition": {
       "properties": {
         "action": { "const": "enterPosition" },
@@ -243,6 +254,7 @@
       "oneOf": [
         { "$ref": "#/actionSchemas/back" },
         { "$ref": "#/actionSchemas/brightness" },
+        { "$ref": "#/actionSchemas/command" },
         { "$ref": "#/actionSchemas/enterPosition" },
         { "$ref": "#/actionSchemas/enterWcs" },
         { "$ref": "#/actionSchemas/gcode" },
@@ -267,6 +279,7 @@
             "brightness",
             "clearGcode",
             "clearUserFlag",
+            "command",
             "completeInput",
             "connect",
             "decreaseFeedrate",
