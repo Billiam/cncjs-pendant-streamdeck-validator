@@ -138,7 +138,7 @@ export const logicValidation = (config) => {
   })
 
   // validate global colors exist in palette
-  ;['textColor', 'bgColor', 'progressColor'].forEach((colorKey) => {
+  ;['textColor', 'bgColor', 'pageColor', 'progressColor'].forEach((colorKey) => {
     if (typeof config.ui?.[colorKey] !== 'number') {
       return
     }

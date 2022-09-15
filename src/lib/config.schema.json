@@ -494,6 +494,7 @@
           "G1": { "$ref": "#/definitions/color" },
           "G2G3": { "$ref": "#/definitions/color" }
         },
+        "pageColor": { "$ref": "#/definitions/color" },
         "palette": { "items": { "type": "string" }, "type": "array" },
         "progressColor": { "$ref": "#/definitions/color" },
         "rows": { "type": "integer", "default": 3 },
