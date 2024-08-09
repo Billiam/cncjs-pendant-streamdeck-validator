@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0
+
+Added `secure` cncjs config value
+
 ## 1.3.0
 
 Added `pageColor` ui config
