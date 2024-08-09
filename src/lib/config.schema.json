@@ -397,6 +397,7 @@
         "controllerType": { "enum": ["Grbl"], "type": "string" },
         "port": { "description": "Machine connection port", "type": "string" },
         "secret": { "type": "string" },
+        "secure": { "type": "boolean" },
         "socketAddress": { "type": "string" },
         "socketPort": { "type": "integer" }
       }
