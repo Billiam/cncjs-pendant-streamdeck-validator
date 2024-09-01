@@ -72,7 +72,7 @@
             "maxItems": 1,
             "minItems": 1
           },
-          "const": "gcode"
+          "enum": ["absoluteMachinePosition", "absoluteWorkPosition", "gcode"]
         }
       },
       "required": ["action", "arguments"]
@@ -164,6 +164,7 @@
             "increaseFeedrate",
             "increaseSpindle",
             "loadDetailFile",
+            "outline",
             "pause",
             "refreshWatchFolder",
             "reset",
@@ -234,13 +235,18 @@
       },
       "required": ["action", "arguments"]
     },
-    "userFlag": {
+    "setUserFlag": {
       "properties": {
         "action": { "const": "setUserFlag" },
         "arguments": {
-          "items": {
-            "type": "string"
-          },
+          "items": [
+            {
+              "type": "string"
+            },
+            {
+              "type": ["boolean", "string", "number"]
+            }
+          ],
           "maxItems": 2,
           "minItems": 2
         }
@@ -269,12 +275,14 @@
         { "$ref": "#/actionSchemas/position" },
         { "$ref": "#/actionSchemas/sort" },
         { "$ref": "#/actionSchemas/rapids" },
-        { "$ref": "#/actionSchemas/toggleUserFlag" },
-        { "$ref": "#/actionSchemas/userFlag" }
+        { "$ref": "#/actionSchemas/setUserFlag" },
+        { "$ref": "#/actionSchemas/toggleUserFlag" }
       ],
       "properties": {
         "action": {
           "enum": [
+            "absoluteMachinePosition",
+            "absoluteWorkPosition",
             "backScene",
             "brightness",
             "clearGcode",
@@ -302,6 +310,7 @@
             "loadGcode",
             "macro",
             "navigate",
+            "outline",
             "pause",
             "refreshWatchFolder",
             "reset",
@@ -328,7 +337,7 @@
           "type": "string"
         },
         "arguments": {
-          "items": { "type": ["string", "null"] },
+          "items": { "type": ["string", "number", "boolean", "null"] },
           "type": "array"
         },
         "event": { "default": "down", "enum": ["down", "up", "hold"] }
