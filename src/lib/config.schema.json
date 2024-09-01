@@ -407,6 +407,7 @@
         "port": { "description": "Machine connection port", "type": "string" },
         "secret": { "type": "string" },
         "secure": { "type": "boolean" },
+        "sender": { "type": "string" },
         "socketAddress": { "type": "string" },
         "socketPort": { "type": "integer" }
       }
