@@ -1,4 +1,8 @@
 # Changelog
+## 2.0.0
+
+- Removed unused `toggleShowAbsolutePostion` action
+- Remove unused `loadGcode` action
 
 ## 1.5.0
 

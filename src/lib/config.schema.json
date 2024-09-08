@@ -175,7 +175,6 @@
             "stop",
             "stopFeed",
             "toggleFeedrateInterval",
-            "toggleShowAbsolutePosition",
             "toggleSpindleInterval",
             "unhold",
             "unlock"
@@ -307,7 +306,6 @@
             "jogDistance",
             "jogSpeed",
             "loadDetailFile",
-            "loadGcode",
             "macro",
             "navigate",
             "outline",
@@ -328,7 +326,6 @@
             "stopSmoothJog",
             "swapScene",
             "toggleFeedrateInterval",
-            "toggleShowAbsolutePosition",
             "toggleSpindleInterval",
             "toggleUserFlag",
             "unhold",
