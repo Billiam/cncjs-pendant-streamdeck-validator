@@ -77,7 +77,6 @@
       },
       "required": ["action", "arguments"]
     },
-    "info": { "properties": { "action": false, "arguments": false } },
     "input": {
       "properties": {
         "action": { "const": "input" },
@@ -153,7 +152,6 @@
           "enum": [
             "brightness",
             "clearGcode",
-            "clearUserFlag",
             "completeInput",
             "connect",
             "decreaseFeedrate",
@@ -221,9 +219,9 @@
       },
       "required": ["action", "arguments"]
     },
-    "toggleUserFlag": {
+    "changeUserFlag": {
       "properties": {
-        "action": { "const": "toggleUserFlag" },
+        "action": { "enum": ["clearUserFlag", "toggleUserFlag"] },
         "arguments": {
           "items": {
             "type": "string"
@@ -259,11 +257,11 @@
       "oneOf": [
         { "$ref": "#/actionSchemas/back" },
         { "$ref": "#/actionSchemas/brightness" },
+        { "$ref": "#/actionSchemas/changeUserFlag" },
         { "$ref": "#/actionSchemas/command" },
         { "$ref": "#/actionSchemas/enterPosition" },
         { "$ref": "#/actionSchemas/enterWcs" },
         { "$ref": "#/actionSchemas/gcode" },
-        { "$ref": "#/actionSchemas/info" },
         { "$ref": "#/actionSchemas/input" },
         { "$ref": "#/actionSchemas/inputCommand" },
         { "$ref": "#/actionSchemas/jog" },
@@ -274,8 +272,7 @@
         { "$ref": "#/actionSchemas/position" },
         { "$ref": "#/actionSchemas/sort" },
         { "$ref": "#/actionSchemas/rapids" },
-        { "$ref": "#/actionSchemas/setUserFlag" },
-        { "$ref": "#/actionSchemas/toggleUserFlag" }
+        { "$ref": "#/actionSchemas/setUserFlag" }
       ],
       "properties": {
         "action": {
