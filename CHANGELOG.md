@@ -1,4 +1,8 @@
 # Changelog
+## 2.0.1
+
+- Fixed `clearUserFlag` action not accepting arguments (flag name is required)
+
 ## 2.0.0
 
 - Removed unused `toggleShowAbsolutePostion` action
