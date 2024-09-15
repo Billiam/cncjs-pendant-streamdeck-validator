@@ -1,6 +1,6 @@
 {
   "name": "cncjs-pendant-streamdeck-validator",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Validation utilities for cncjs-pendant-streamdeck configuration",
   "author": "Billiam",
   "license": "MIT",
