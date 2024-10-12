@@ -1,4 +1,8 @@
 # Changelog
+## 2.1.0
+
+- Added `textSize` value to `ui` section
+
 ## 2.0.1
 
 - Fixed `clearUserFlag` action not accepting arguments (flag name is required)
