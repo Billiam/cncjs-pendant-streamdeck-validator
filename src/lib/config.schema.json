@@ -505,6 +505,7 @@
         "rows": { "type": "integer", "default": 3 },
         "textColor": { "$ref": "#/definitions/color" },
         "textShadow": { "type": "boolean" },
+        "textSize": { "type": "number" },
         "throttle": {
           "type": "integer",
           "minimum": 0
