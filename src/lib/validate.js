@@ -189,8 +189,10 @@ export const logicValidation = (config) => {
       })
     })
   })
+  const dynamicButtons = ['fileListDownArrow', 'fileListUpArrow', 'fileListFile', 'fileListFolderButton', 'fileListPreviousFolder']
+
   Object.entries(config.buttons || {}).forEach(([button]) => {
-    if (!referencedButtons.has(button)) {
+    if (!referencedButtons.has(button) && !dynamicButtons.includes(button)) {
       const errorPath = ['buttons', button]
       const property = `instance.${errorPath.join('.')}`
       const message = 'is not used in any scenes'

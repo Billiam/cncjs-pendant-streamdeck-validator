@@ -1,4 +1,9 @@
 # Changelog
+
+## 2.1.1
+
+- Exclude dynamic buttons used in file list from unreferenced buttons check
+
 ## 2.1.0
 
 - Added `textSize` value to `ui` section
